@@ -6,7 +6,7 @@ const wss = new WebSocket.Server({ port: 8080 });
 // Track connected clients
 const clients = new Set();
 
-// Handle new connections
+// Handle new connection
 wss.on('connection', (ws) => {
   clients.add(ws);
   console.log('New client connected');
@@ -23,7 +23,7 @@ wss.on('connection', (ws) => {
     });
   });
 
-  // Handle disconnection
+  // Handle socket disconnection
   ws.on('close', () => {
     clients.delete(ws);
     console.log('Client disconnected');

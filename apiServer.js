@@ -6,7 +6,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(logger);
 
-// Simulated in-memory data
+// Simulated in-memory data store
 let resources = {};
 let resourceId = 1;
 
